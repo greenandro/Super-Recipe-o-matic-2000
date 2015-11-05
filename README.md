@@ -11,16 +11,13 @@ First install the Python dependencies.
 $ pip install requests
 ```
 
-Now, visit AllRecipes.com and get yourself the `Authorization` header from a request to `apps.allrecipes.com`. Take the authorization header – that's the *whole* authorization header – and drop it right into your command prompt:
+Now, visit AllRecipes.com and get yourself the `Authorization` header from a request to `apps.allrecipes.com`. The easiest way to get the authorization header is from `http://allrecipes.com/recipes/` which makes an AJAX request to load new page data for infinite scrolling. Take the authorization header – that's the *whole* authorization header – and drop it right into your command prompt:
 
 ```
 $ python3 main.py --bearer="Bearer P6k/U+2F1ECWIwpm..."
 ```
 
-The easiest way to get the authorization header is from `http://allrecipes.com/recipes/` which makes an AJAX request to load new page data for infinite scrolling.
-
 Press enter and let the script chug away, generating recipes in `recipes.json`. Yes, it's that simple!
-
 
 Here are the other flags:
 
