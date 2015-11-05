@@ -13,7 +13,7 @@ $ pip install requests
 
 Now, visit AllRecipes.com and get yourself the `Authorization` header from a request to `apps.allrecipes.com`. The easiest way to get the authorization header is from `http://allrecipes.com/recipes/` which makes an AJAX request to load new page data for infinite scrolling. Take the authorization header – that's the *whole* authorization header – and drop it right into your command prompt:
 
-```
+```sh
 $ python3 main.py --bearer="Bearer P6k/U+2F1ECWIwpm..."
 ```
 
@@ -64,7 +64,7 @@ Each recipe looks like this:
     ...
   ],
   "footnotes": [
-    STRING Extra note,
+    STRING Note,
     ...
   ]
 }

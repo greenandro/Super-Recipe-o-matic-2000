@@ -75,7 +75,7 @@ def load_current_recipes(file):
     with open(file, 'r') as f:
         data = json.load(f)
         if data['version'] != DATA_VERSION:
-            print("WARNING - Mew and current data versions do not match")
+            print("WARNING - New and current data versions do not match")
         return data['recipes']
 
 def get_current_ids(recipes):
@@ -112,7 +112,7 @@ def lookup_recipes_loop(current_recipes, outfile, start, page_size):
         for x in new:
             current_ids[x['id']] = 1
             current_recipes.append(x)
-        print("Wrote output - ".format(outfile))
+        print("Wrote output - {0}".format(outfile))
         write_recipes(current_recipes, outfile)
 
 parser = argparse.ArgumentParser()
